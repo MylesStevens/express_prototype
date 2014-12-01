@@ -71,7 +71,22 @@
     <div class="example example-grid">
       <div class="grid-row">
         <div class="column-third">
-          <p>Content</p>
+           <p>
+      <label class="form-label-bold" for="reason"><br />
+        Reason for Issue</label>
+     
+        <select name="Reason" id="Reason" >
+        <option value="Choose reason...">Choose reason...</option>
+        <option value="Change Address" selected>Change Address</option>
+        <option value="Replace">Replace</option>
+        <option value="Renew">Renew</option>
+        <option value="1st Application">1st Application</option>
+      </select>
+        <label class="form-label-bold" for="DR-number3">Driver Number</label>
+        <input type="text" class="form-control" id="DR-number3" value="" maxlength="16" autofocus/>
+   <label class="form-label-bold" for="ni-number"> Issue Number </label>
+    <input type="text" class="form-control-1-4" id="ni-number" value="" maxlength="2"></p>
+    <input name="Start" type="button" class="button" value="Start" onClick="changeImage()" ></p>
         </div>
         <div class="column-third">
           <p>Content</p>
