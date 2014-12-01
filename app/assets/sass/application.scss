@@ -42,3 +42,27 @@
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you,
 // either add and import new partial files, or modify those in GOV.UK elements to fit your user needs.
+
+ .heading-xsmall {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.0;
+  font-weight: 700;
+  text-transform: none;
+  margin-top: 0.625em;
+  margin-bottom: 0.3125em; }
+  @media (max-width: 640px) {
+    .heading-xsmall {
+      font-size: 12px;
+      line-height: 1.0; } }
+  @media (min-width: 641px) {
+    .heading-xsmall {
+      margin-top: 1.05263em; } }
+
+.column-fifth {
+  padding: 0 5px;
+  box-sizing: border-box; }
+  @media (min-width: 641px) {
+    .column-quarter {
+      float: left;
+      width: 20%; } }
