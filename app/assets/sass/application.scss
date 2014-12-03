@@ -73,3 +73,11 @@
     margin-top: 0.0m;
     margin-bottom: 0.5em;
     Font-size: 14px;}
+
+    .grid-row {
+  margin: 0 -15px; 
+  background-color: #456e40;}
+  .grid-row:after {
+    content: "";
+    display: block;
+    clear: both; }
