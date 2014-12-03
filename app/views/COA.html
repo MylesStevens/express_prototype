@@ -87,10 +87,297 @@
     <input name="Start" type="button" class="button" value="Start" onClick="changeImage()" ></p>
         </div>
         <div class="column-third">
-          <p>Content</p>
+          <p> <form id="form2" name="form2" method="post" action="">
+      <p>
+        <label class="form-label-bold" for="ni-number2"> <br />
+        House number/ Name</label>
+        <input type="text" class="form-control" id="housenumber" >
+        <label class="form-label-bold" for="ni-number5">Post Code</label>
+        
+        <input type="text" class="form-control" id="ni-number5" onKeyDown="if (event.keyCode == 13) document.getElementById('Findaddress1').click()">
+  
+        <input name="Findaddress1" type="button" class="button" value="Find Adress" onclick="FindAddress()" />
+      </p>
+    </form>
+    
+      <p>
+        <label class="form-label-bold" for="ni-number6">New Address</label>
+        <textarea name="Address3" rows="5" class="form-control" id="Address3" ></textarea>
+        <label class="form-label-bold" for="ni-number2"> Email address</label>
+        <input type="text" class="form-control" id="email">
+      
+        <label class="form-label-bold" for="ni-number7">Country you were born in</label>
+        <!--<input type="text" class="form-control" id="countborn">-->
+        <input type=text class="form-control-1-2" list=browsers >
+        <datalist id=browsers >
+          <option> Afghanistan
+          <option> Albania
+          <option> Algeria
+          <option> Andorra
+          <option> Angola
+          <option> Antigua & Deps
+          <option> Argentina
+          <option> Armenia
+          <option> Australia
+          <option> Austria
+          <option> Azerbaijan
+          <option> Bahamas
+          <option> Bahrain
+          <option> Bangladesh
+          <option> Barbados
+          <option> Belarus
+          <option> Belgium
+          <option> Belize
+          <option> Benin
+          <option> Bhutan
+          <option> Bolivia
+          <option> Bosnia Herzegovina
+          <option> Botswana
+          <option> Brazil
+          <option> Brunei
+          <option> Bulgaria
+          <option> Burkina
+          <option> Burundi
+          <option> Cambodia
+          <option> Cameroon
+          <option> Canada
+          <option> Cape Verde
+          <option> Central African Rep
+          <option> Chad
+          <option> Chile
+          <option> China
+          <option> Colombia
+          <option> Comoros
+          <option> Congo
+          <option> Congo {Democratic Rep}
+          <option> Costa Rica
+          <option> Croatia
+          <option> Cuba
+          <option> Cyprus
+          <option> Czech Republic
+          <option> Denmark
+          <option> Djibouti
+          <option> Dominica
+          <option> Dominican Republic
+          <option> East Timor
+          <option> Ecuador
+          <option> Egypt
+          <option> El Salvador
+          <option> England 
+          <option> Equatorial Guinea
+          <option> Eritrea
+          <option> Estonia
+          <option> Ethiopia
+          <option> Fiji
+          <option> Finland
+          <option> France
+          <option> Gabon
+          <option> Gambia
+          <option> Georgia
+          <option> Germany
+          <option> Ghana
+          <option> Greece
+          <option> Grenada
+          <option> Guatemala
+          <option> Guinea
+          <option> Guinea-Bissau
+          <option> Guyana
+          <option> Haiti
+          <option> Honduras
+          <option> Hungary
+          <option> Iceland
+          <option> India
+          <option> Indonesia
+          <option> Iran
+          <option> Iraq
+          <option> Ireland {Republic}
+          <option> Israel
+          <option> Italy
+          <option> Ivory Coast
+          <option> Jamaica
+          <option> Japan
+          <option> Jordan
+          <option> Kazakhstan
+          <option> Kenya
+          <option> Kiribati
+          <option> Korea North
+          <option> Korea South
+          <option> Kosovo
+          <option> Kuwait
+          <option> Kyrgyzstan
+          <option> Laos
+          <option> Latvia
+          <option> Lebanon
+          <option> Lesotho
+          <option> Liberia
+          <option> Libya
+          <option> Liechtenstein
+          <option> Lithuania
+          <option> Luxembourg
+          <option> Macedonia
+          <option> Madagascar
+          <option> Malawi
+          <option> Malaysia
+          <option> Maldives
+          <option> Mali
+          <option> Malta
+          <option> Marshall Islands
+          <option> Mauritania
+          <option> Mauritius
+          <option> Mexico
+          <option> Micronesia
+          <option> Moldova
+          <option> Monaco
+          <option> Mongolia
+          <option> Montenegro
+          <option> Morocco
+          <option> Mozambique
+          <option> Myanmar, {Burma}
+          <option> Namibia
+          <option> Nauru
+          <option> Nepal
+          <option> Netherlands
+          <option> New Zealand
+          <option> Nicaragua
+          <option> Niger
+          <option> Nigeria
+          <option> Norway
+          <option> Oman
+          <option> Pakistan
+          <option> Palau
+          <option> Panama
+          <option> Papua New Guinea
+          <option> Paraguay
+          <option> Peru
+          <option> Philippines
+          <option> Poland
+          <option> Portugal
+          <option> Qatar
+          <option> Romania
+          <option> Russian Federation
+          <option> Rwanda
+          <option> St Kitts & Nevis
+          <option> St Lucia
+          <option> Saint Vincent & the Grenadines
+          <option> Samoa
+          <option> San Marino
+          <option> Sao Tome & Principe
+          <option> Saudi Arabia
+          <option> Scotland
+          <option> Senegal
+          <option> Serbia
+          <option> Seychelles
+          <option> Sierra Leone
+          <option> Singapore
+          <option> Slovakia
+          <option> Slovenia
+          <option> Solomon Islands
+          <option> Somalia
+          <option> South Africa
+          <option> South Sudan
+          <option> Spain
+          <option> Sri Lanka
+          <option> Sudan
+          <option> Suriname
+          <option> Swaziland
+          <option> Sweden
+          <option> Switzerland
+          <option> Syria
+          <option> Taiwan
+          <option> Tajikistan
+          <option> Tanzania
+          <option> Thailand
+          <option> Togo
+          <option> Tonga
+          <option> Trinidad & Tobago
+          <option> Tunisia
+          <option> Turkey
+          <option> Turkmenistan
+          <option> Tuvalu
+          <option> Uganda
+          <option> Ukraine
+          <option> United Arab Emirates
+          <option> United Kingdom
+          <option> United States
+          <option> Uruguay
+          <option> Uzbekistan
+          <option> Vanuatu
+          <option> Vatican City
+          <option> Venezuela
+          <option> Vietnam
+          <option> Wales
+          <option> Yemen
+          <option> Zambia
+          <option> Zimbabwe 
+        </datalist>
+    </p>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="50%"><label class="form-label-bold" for="ni-number8">Daytime tel number </label>
+            <input type="text" class="form-control" id="ni-number8" width="10"></td>
+          <td width="50%"><label class="form-label-bold" for="ni-number8">&nbsp;Mobile number</label>
+            
+            <!--    <label class="form-label-bold" for="ni-number8">Mobile Number</label>-->
+            
+            <input name="mobno" type="text" class="form-control" id="mobno" onKeyup="autotab(this, document.form4.eyes)" size="11" maxlength="11"></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+    </form></p>
         </div>
         <div class="column-third">
-          <p>Content</p>
+           <div id="RefNo2"class="form-label-bold" align="right"> Ref:000 000 000 </div>
+  
+     <form id="form4" name="form4" method="post" action="">
+       <p>
+         <label class="form-label-bold" for="full-name2">         Eyesight</label>
+         <select name="eyes" id="eyes">
+           <option value="No glases">No glasses</option>
+           <option value="Glasses">Glasses</option>
+         </select>
+       </p>
+    </form>
+    <form id="organform" name="organform" method="post" action="">
+      <label>
+        <input type="checkbox" name="organform" id="all" onClick="toggle(this)"/>
+      <span class="bold-xsmall">All</span></label>
+      <br>
+      <label>
+        <input type="checkbox" name="organform" id="alltissue" onClick="toggletissue(this)" />
+        <span class="bold-xsmall">All with tissue</span></label>
+      <br>
+      <label>
+        <input type="checkbox" name="organform" id="kidnies"/>
+        <span class="bold-xsmall">Kidneys</span></label>
+      <br>
+      <label>
+        <input type="checkbox" name="organform" id="corneas"/>
+        <span class="bold-xsmall">Corneas</span></label>
+      <br>
+      <label>
+        <input type="checkbox" name="organform" id="heart"/>
+        <span class="bold-xsmall">Heart </span></label>
+      <br>
+      <label>
+        <input type="checkbox"name="organform" id="lungs"/>
+        <span class="bold-xsmall">Lungs </span></label>
+      <br>
+      <label>
+        <input type="checkbox" name="organform"id="pancreas"/>
+        <span class="bold-xsmall">Pancreas </span></label>
+      <br>
+      <label>
+        <input type="checkbox" name="organform"id="withdraw"onClick="togglewithdraw(this)"/>
+        <span class="bold-xsmall">Withdraw consent</span></label>
+      </p>
+    </form>
+      
+            
+            
+            
+          <p><input name="Submit" type="button" class="button" id="Sibmit" value="Submit"onClick="Starten()" > </p>
+          <p>&nbsp;</p>
+  </div>
         </div>
       </div>
     </div>
