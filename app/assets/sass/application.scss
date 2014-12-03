@@ -74,10 +74,10 @@
     margin-bottom: 0.5em;
     Font-size: 14px;}
 
-    .grid-row {
+    .grid-row-current {
   margin: 0 -15px; 
   background-color: #456e40;}
-  .grid-row:after {
+  .grid-row-current:after {
     content: "";
     display: block;
     clear: both; }
