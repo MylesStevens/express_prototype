@@ -60,6 +60,24 @@
       margin-top: 0em;
       margin-bottom: 0.05em; } }
 
+ .heading-xsmall-white {
+  font-family: "nta", Arial, sans-serif;
+  font-color: white;
+  font-size: 14px;
+  line-height: 1.0;
+  font-weight: 700;
+  text-transform: none;
+  margin-top: 0.5em;
+  margin-bottom: 0.05em; }
+  @media (max-width: 640px) {
+    .heading-xsmall {
+      font-size: 12px;
+      line-height: 1.0; } }
+  @media (min-width: 641px) {
+    .heading-xsmall {
+      margin-top: 0em;
+      margin-bottom: 0.05em; } }
+
 .column-quarter {
   padding: 0 15px;
   box-sizing: border-box; 
@@ -72,8 +90,9 @@
 
   p.data { 
     margin-top: 0.0m;
-    margin-bottom: 0.05em;
-    Font-size: 14px;}
+    margin-bottom: 0.5em;
+    font-size: 14px;
+    font-color: white;}
 
     .grid-row-current {
   margin: 0 -15px; 
