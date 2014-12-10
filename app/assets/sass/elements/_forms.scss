@@ -89,6 +89,8 @@ fieldset {
 
   width: 100%;
   @include box-sizing(border-box);
+  font-size: 14px;
+  line-height: 1;
   padding: 4px;
   background-color: $white;
   border: 1px solid $border-colour;
@@ -98,7 +100,7 @@ fieldset {
   border-radius: 0;
 
   @include media(tablet) {
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -163,3 +165,84 @@ fieldset {
 // Form patterns
 @import "forms/form-date";
 @import "forms/form-block-labels";
+
+
+.form-control-small {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 0.7;
+  font-weight: 400;
+  text-transform: none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 0.7;
+  padding: 1px;
+  background-color: #fff;
+  border: 1px solid #bfc1c3;
+  -webkit-appearance: none;
+  border-radius: 0; }
+  @media (max-width: 640px) {
+    .form-control-small {
+      font-size: 14px;
+      line-height: 0.7; } }
+  @media (min-width: 641px) {
+    .form-control-small {
+      width: 100%; } }
+
+.form-control-addressbox {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 1;
+  padding: 1px;
+  background-color: #fff;
+  border: 1px solid #bfc1c3;
+  -webkit-appearance: none;
+  border-radius: 0; }
+  @media (max-width: 640px) {
+    .form-control-small {
+      font-size: 14px;
+      line-height: 1; } }
+  @media (min-width: 641px) {
+    .form-control-small {
+      width: 100%; } }
+
+      .form-control-3-4-small {
+  width: 100%; }
+  @media (min-width: 641px) {
+    .form-control-3-4 {
+      width: 75%; } }
+
+.form-control-1-2-small {
+  width: 50%; 
+  font-size: 14px;
+  line-height: 0.7;
+  padding: 1px;}
+  @media (min-width: 641px) {
+    .form-control-1-2 {
+    font-size: 14px;
+  line-height: 0.7;
+  padding: 1px;
+      width: 50%; } }
+
+.form-control-1-4-small {
+font-size: 14px;
+  line-height: 0.7;
+  padding: 1px;
+  width: 25%; }
+
+.form-control-1-8-small {
+font-size: 14px;
+  line-height: 0.7;
+  padding: 1px;
+  width: 12.5%; }

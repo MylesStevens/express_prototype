@@ -5,115 +5,366 @@
 {{$content}}
 <main id="content" role="main">
   <header class="page-header">
+
+<script>
+function autotab(current,to){
+    if (current.getAttribute && 
+      current.value.length==current.getAttribute("maxlength")) {
+        to.focus() 
+        }
+}
+</script>
+
+<script>
+function autotab2(current,to){
+    if (current.getAttribute && 
+      current.value.length==current.getAttribute("maxlength")) {
+        var refnov = "Ref:123 456 789";
+    var titlefieldV = "Mrs";
+    var GenderV = "Female";
+    var SurnamefieldV = "Prmrowxyz";
+    var forefieldV = "Dynaomo Oswald";
+    var dobfieldV = "O2 07 1972";
+    var currentfield1V = "75 Cloud Lane";
+    var currentfield2V = "Lothlorien";
+    var currentfield3V = "Swansea";
+    var currentfield4V = "SA6 7JL";
+    var phonenumberfieldV = "01792 520584";
+    var emailfieldV = "Dynaomo.Prmrowxyz@freemail.com";
+    var drivernofieldV = "PRMO807045OD0KM";
+    var issuefieldV = "05"
+    var statusV = "Full"
+    var validfrfieldV = "21 07 2011"
+    var validtofieldV = "21 07 2018"
+    var photoexpfieldV = "21 07 2018"
+
+
+  //also change the ref number
+  document.getElementById("RefNo2").innerHTML = refnov;
+  document.getElementById("titlefield").innerHTML = titlefieldV;
+  document.getElementById("genderfield").innerHTML = GenderV;
+  document.getElementById("Surnamefield").innerHTML = SurnamefieldV;
+  document.getElementById("forefield").innerHTML = forefieldV;
+  document.getElementById("dobfield").innerHTML = dobfieldV;
+  document.getElementById("currentfield1").innerHTML = currentfield1V;
+  document.getElementById("currentfield2").innerHTML = currentfield2V;
+  document.getElementById("currentfield3").innerHTML = currentfield3V;
+  document.getElementById("currentfield4").innerHTML = currentfield4V;
+
+  document.getElementById("phonenumberfield").innerHTML = phonenumberfieldV;
+  document.getElementById("emailfield").innerHTML = emailfieldV;
+  document.getElementById("drivernofield").innerHTML = drivernofieldV;
+  document.getElementById("issuefield").innerHTML = issuefieldV;
+  document.getElementById("statusfield").innerHTML = statusV;
+  document.getElementById("validfrfield").innerHTML = validfrfieldV;
+  document.getElementById("validtofield").innerHTML = validtofieldV;
+  document.getElementById("photoexpfield").innerHTML = photoexpfieldV;
+
+  document.photoimg.src = "../public/images/samplephoto.png"
+  document.sigimg.src = "../public/images/samplesig.png"
+  document.getElementById("housenumber").focus();   
+        to.focus() 
+        }
+}
+</script>
+
+<script>
+  function FindAddress2() { 
+
+  var textToAppend ="244 Mud Place\nImladris\nSwansea\nSA5 8ET"
     
+    document.getElementById('Address3').value = textToAppend;
+  }
+</script>
+
+<script>
+  function PopulateAddress() { 
+ 
+  var textToAppend = "75 Cloud Lane\nLothlorien\nSwansea\nSA6 7JL"
+    document.getElementById('Address3').value = textToAppend;
+ } 
+</script>
+
+
+
+
+
+<script>
+
+//   function changeImage() {
+
+//     var refnov = "Ref:123 456 789";
+//     var titlefieldV = "Mrs";
+//     var GenderV = "Female";
+//     var SurnamefieldV = "Prmrowxyz";
+//     var forefieldV = "Dynaomo Oswald";
+//     var dobfieldV = "O2 07 1972";
+//     var currentfield1V = "75 Cloud Lane";
+//     var currentfield2V = "Lothlorien";
+//     var currentfield3V = "Swansea";
+//     var currentfield4V = "SA6 7JL";
+//     var phonenumberfieldV = "01792 520584";
+//     var emailfieldV = "Dynaomo.Prmrowxyz@freemail.com";
+//     var drivernofieldV = "PRMO807045OD0KM";
+//     var issuefieldV = "05"
+//     var statusV = "Full"
+//     var validfrfieldV = "21 07 2011"
+//     var validtofieldV = "21 07 2018"
+//     var photoexpfieldV = "21 07 2018"
+
+
+//   //also change the ref number
+//   document.getElementById("RefNo2").innerHTML = refnov;
+//   document.getElementById("titlefield").innerHTML = titlefieldV;
+//   document.getElementById("genderfield").innerHTML = GenderV;
+//   document.getElementById("Surnamefield").innerHTML = SurnamefieldV;
+//   document.getElementById("forefield").innerHTML = forefieldV;
+//   document.getElementById("dobfield").innerHTML = dobfieldV;
+//   document.getElementById("currentfield1").innerHTML = currentfield1V;
+//   document.getElementById("currentfield2").innerHTML = currentfield2V;
+//   document.getElementById("currentfield3").innerHTML = currentfield3V;
+//   document.getElementById("currentfield4").innerHTML = currentfield4V;
+
+//   document.getElementById("phonenumberfield").innerHTML = phonenumberfieldV;
+//   document.getElementById("emailfield").innerHTML = emailfieldV;
+//   document.getElementById("drivernofield").innerHTML = drivernofieldV;
+//   document.getElementById("issuefield").innerHTML = issuefieldV;
+//   document.getElementById("statusfield").innerHTML = statusV;
+//   document.getElementById("validfrfield").innerHTML = validfrfieldV;
+//   document.getElementById("validtofield").innerHTML = validtofieldV;
+//   document.getElementById("photoexpfield").innerHTML = photoexpfieldV;
+
+//   document.photoimg.src = "../public/images/samplephoto.png"
+//   document.sigimg.src = "../public/images/samplesig.png"
+//   document.getElementById("housenumber").focus();   
+
+// }
+
+
+// </script>
+
+<script>
+function toggle2(source) {
+  checkboxes = document.getElementsByName('organform');
+  for(var i=0, n=checkboxes.length;i<n;i++) {
+    checkboxes[i].checked = source.checked;
+  }
+ document.getElementById("alltissue").checked = false;
+ document.getElementById("withdraw").checked = false;
+}
+</script>
+
+<script>
+function toggletissue2(source) {
+  checkboxes = document.getElementsByName('organform');
+  for(var i=0, n=checkboxes.length;i<n;i++) {
+    checkboxes[i].checked = source.checked;
+  }
+ document.getElementById("all").checked = false;
+ document.getElementById("withdraw").checked = false;
+}
+
+ </script>
+
+ <script>
+function togglewithdraw2(source) {
+ document.getElementById("all").checked = false;
+ document.getElementById("alltissue").checked = false;
+ document.getElementById("heart").checked = false;
+ document.getElementById("lungs").checked = false;
+ document.getElementById("kidnies").checked = false;
+ document.getElementById("pancreas").checked = false;
+ document.getElementById("corneas").checked = false;
+ document.getElementById("liver").checked = false;
+ 
+}
+</script>
+
+<script>
+
+function Submiten() { 
+ var x;
+    if (confirm("Confirm that the details you have entered are correct") == true) {
+        x = "You pressed OK!";
+    window.open("COA.html");
+    } else {
+        x = "You pressed Cancel!";
+    }
+    
+ }
+</script>
+
+<script>
+function emailformat() {
+    var x = document.forms["form3"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+     
+      document.getElementById('email').style.border = "3px solid red";
+
+  
+        // alert("Not a valid e-mail address");
+        return false;
+      }
+        else {
+        document.getElementById('email').style.border = "1px solid #bfc1c3"; 
+    }
+}
+</script>
+
+<script >
+function numbersonly(e){
+var unicode=e.charCode? e.charCode : e.keyCode
+if (unicode!=8){ //if the key isn't the backspace key (which we should allow)
+if (unicode<48||unicode>57) //if not a number
+return false //disable key press
+}
+}
+</script>
+
+
+
   </header>
-<div>
-   <h4 class="heading-xsmall">Current Information </h4>
-  </div>
+
+
+
+<!--   <details open >
+
+  <summary role="button" aria-controls="details-content-1" tabindex="0" aria-expanded="true">
+  <span class="heading-small">Current Information</span>
+  </summary> -->
+
     <!-- <div > -->
+    <!-- <h4 class="heading-small">Current Information</h4> -->
       <div class="example example-grid">
       <div class="grid-row-current">
        <div class="column-quarter">
           <!-- <p class ="data"><h4 class="heading-xsmall-white">Title</h4></p> -->
           <h4 class ="heading-xsmall-white">Title</h4>
-            <p class ="data"> Mrs</p>
+            <p class ="data" id="titlefield"> &nbsp;</p>
             <h4 class="heading-xsmall-white">Gender</h4>
-            <p class="data"> Female</p>
+            <p class="data" id="genderfield"> &nbsp;</p>
             <h4 class="heading-xsmall-white">Surname</h4>
-            <p class="data"> Prmrowxyz</p>
+            <p class="data" id="Surnamefield"> &nbsp;</p>
              <h4 class="heading-xsmall-white">Fore name(s)</h4>
-            <p class ="data">Dynaomo Oswald</p>
+            <p class ="data"id="forefield"> &nbsp;</p>
             <h4 class="heading-xsmall-white">Date of Birth</h4>
-            <p class="data"> O2 07 1972</p>
+            <p class="data" id="dobfield"> &nbsp;</p>
         </div>
        
         <div class="column-quarter">
            <h4 class="heading-xsmall-white">Current address</h4>
-            <p class ="data">244 Mud Place<br>Imladris<br>Swansea<br>SA5 8ET</p>
+            <p class ="data" id="currentfield1">&nbsp;</p>
+            <p class ="data" id="currentfield2">&nbsp;</p>
+            <p class ="data" id="currentfield3">&nbsp;</p>
+            <p class ="data" id="currentfield4">&nbsp;</p>
             
             
                
                 <h4 class="heading-xsmall-white">Day time tel number</h4>
-            <p class ="data" >01792 520584</p>
+            <p class ="data" id="phonenumberfield">&nbsp;</p>
                 
                 
                <h4 class="heading-xsmall-white">Mobile number</h4>
-            <p class ="data" > &nbsp;</p>
+            <p class ="data" id="mobilefield"> &nbsp;</p>
               <h4 class="heading-xsmall-white">Email address</h4>
-            <p class ="data">Dynaomo.Prmrowxyz@freemail.com</p>
+            <p class ="data" id="emailfield">&nbsp;</p>
             
         </div>
         <div class="column-quarter">
           <h4 class="heading-xsmall-white">Driver number</h4>
-          <p class ="data">PRMO807045OD0KM</p>
+          <p class ="data" id="drivernofield">&nbsp;</p>
           <h4 class="heading-xsmall-white">Issue number</h4>
-          <p class ="data">01</p>
+          <p class ="data" id="issuefield">&nbsp;</p>
          
             <h4 class="heading-xsmall-white">Licence status</h4>
-            <p class ="data">Full</p>
+            <p class ="data" id="statusfield">&nbsp;</p>
             <h4 class="heading-xsmall-white">Valid from</h4>
-            <p class ="data">21 07 2011</p>
-            <h4 class="heading-xsmall-white">Valid too</h4>
-            <p class ="data">21 07 2018</p>
+            <p class ="data" id="validfrfield">&nbsp;</p>
+            <h4 class="heading-xsmall-white">Valid to</h4>
+            <p class ="data" id="validtofield">&nbsp;</p>
         </div>
-        <div class="column-quarter">
+        <div class="column-quarter" background-color="#ffffff";>
             <h4 class="heading-xsmall-white">Photo expiry date</h4>
-            <p class ="data">21 07 2018</p>
-            <img src="../public/images/samplephoto.png"/>
-            <img src="../public/images/samplesig.png"/>
+            <p class ="data" id="photoexpfield">&nbsp;</p>
+            <img src="../public/images/samplephoto_blank.png" name="photoimg"/>
+            <img src="../public/images/samplesig_blank.png" name="sigimg"/>
         </div>
       </div>
     </div>
+<!--  </details> -->
+
+ <!-- <hr> --><!-- -------------------- -->
 
 
- <hr><!-- -------------------- -->
+ <div id="RefNo2"class="heading-xsmall" align="right"> Ref:000 000 000 </div>
 
+<!--  <h4 class="heading-small">New Information</h4> -->
 
-<h4 class="heading-xsmall">New Information</h4>
 
     <div class="example example-grid">
-      <div class="grid-row">
-        <div class="column-third">
-           <p>
-      <p class ="fields"><label class="heading-xsmall" for="reason"><br />
-        Reason for Issue</label></P>
-        <select name="Reason" id="Reason" >
-        <option value="Choose reason...">Choose reason...</option>
-        <option value="Change Address" selected>Change Address</option>
-        <option value="Replace">Replace</option>
-        <option value="Renew">Renew</option>
-        <option value="1st Application">1st Application</option>
-      </select>
 
-        <p class ="fields"><label class="heading-xsmall" for="DR-number3">Driver Number</label></p>
-        <input type="text" class="form-control" id="DR-number3" value="" maxlength="16" autofocus/>
-   <p class ="fields"><label class="heading-xsmall" for="ni-number"> Issue Number </label></p>
-    <input type="text" class="form-control-1-4" id="ni-number" value="" maxlength="2"></p>
-    <input name="Start" type="button" class="button" value="Start" onClick="changeImage()" ></p>
+      <div class="grid-row">
+
+        <div class="column-quarter">
+         <form id="form1" name="form1" method="post" action="">
+           
+            <p class ="fields"><label class="heading-xsmall" for="reason">
+              Reason for Issue</label></P>
+            <select class="form-control-1-2-small" name="Reason" id="Reason" >
+              <option value="Choose reason...">Choose reason...</option>
+              <option value="Change Address" selected>Change Address</option>
+              <option value="Replace">Replace</option>
+              <option value="Renew">Renew</option>
+              <option value="1st Application">1st Application</option>
+            </select>
+
+            <p class ="fields"><label class="heading-xsmall" for="DR-number3">Driver Number</label></p>
+            <input type="text"  class="form-control-small" id="DR-number3" onKeyup="autotab2(this, document.form1.Issuenumber2)"value="" maxlength="16" autofocus/>
+
+            <p class ="fields"><label class="heading-xsmall" for="Issuenumber2"> Issue Number </label></p>
+            <input type="text" class="form-control-1-4-small" id="Issuenumber2" onkeypress="return numbersonly(event)" onKeyup="autotab(this, document.form2.housenumber)" value="" maxlength="2"></p>
+
+            <!-- <input name="Start" type="button" class="button" value="Start" onClick="changeImage()" > -->
+          </form>
         </div>
-        <div class="column-third">
-          <p> <form id="form2" name="form2" method="post" action="">
-      <p>
-        <label class="heading-xsmall" for="ni-number2"> <br />
-        House number/ Name</label>
-        <input type="text" class="form-control" id="housenumber" >
-        <label class="heading-xsmall" for="ni-number5">Post Code</label>
-        
-        <input type="text" class="form-control" id="ni-number5" onKeyDown="if (event.keyCode == 13) document.getElementById('Findaddress1').click()">
+
+      <div class="column-third">
+          <form id="form2" name="form2" method="post" action="">
+
+
+          <p class="fields"><label class="heading-xsmall" for="ni-number2">House number/name </label></p>
+          <input type="text" class="form-control-small" id="housenumber" >
+
+          <p class="fields"><label class="heading-xsmall" for="ni-number5">Post code</label></p>
+          <input type="text" class="form-control-1-4-small" id="ni-number5" onKeyDown="if (event.keyCode == 13) document.getElementById('Findaddress1').click()"></p>
   
-        <input name="Findaddress1" type="button" class="button" value="Find Adress" onclick="FindAddress()" />
-      </p>
-    </form>
+           <input name="Findaddress1" type="button" class="button" value="Find Address" onclick="FindAddress2()" />
+            
+          <input name="popaddress1" type="button" class="button-secondary" value="Populate Address" onclick="PopulateAddress()" />
     
-      <p>
+    </form>
+ <!-- SAME ORDER AS D1 STOP CHANGING THINGS ROUND -->       
+<form id="form3" name="form3" method="post" action="">
         <label class="heading-xsmall" for="ni-number6">New Address</label>
-        <textarea name="Address3" rows="5" class="form-control" id="Address3" ></textarea>
-        <label class="heading-xsmall" for="ni-number2"> Email address</label>
-        <input type="text" class="form-control" id="email">
-      
-        <label class="heading-xsmall" for="ni-number7">Country you were born in</label>
+        <textarea name="Address3" rows="5" class="form-control-addressbox" id="Address3" ></textarea>
+
+<table style="border: 1px solid white; width:100%; cellspacing=0; cellpadding=0">
+        <tr>
+          <td width="50%"><label class="heading-xsmall" for="ni-number8">Daytime tel number </label>
+            <input type="text" class="form-control-small" id="ni-number8" width="10" onkeypress="return numbersonly(event)"></td>
+          <td width="50%"><label class="heading-xsmall" for="ni-number8">&nbsp;Mobile number</label>
+            <input name="mobno" type="text" class="form-control-small" id="mobno"  onkeypress="return numbersonly(event)" onKeyup="autotab(this, document.form4.eyes)" size="11" maxlength="11"></td>
+        </tr>
+      </table>
+
+      <p class="fields"><label class="heading-xsmall" for="ni-number2" id="emaillable"> Email address</label></P>
+        <input type="text" class="form-control-small" id="email" onKeyDown="if (event.keyCode == 9) emailformat()">
+
+<p class="fields"><label class="heading-xsmall" for="ni-number7">Country you were born in</label></P>
         <!--<input type="text" class="form-control" id="countborn">-->
-        <input type=text class="form-control-1-2" list=browsers >
+        <input type=text class="form-control-small" list=browsers >
         <datalist id=browsers >
           <option> Afghanistan
           <option> Albania
@@ -247,6 +498,7 @@
           <option> Niger
           <option> Nigeria
           <option> Norway
+          <option> Northern Ireland
           <option> Oman
           <option> Pakistan
           <option> Palau
@@ -315,40 +567,36 @@
           <option> Zambia
           <option> Zimbabwe 
         </datalist>
-    </p>
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td width="50%"><label class="heading-xsmall" for="ni-number8">Daytime tel number </label>
-            <input type="text" class="form-control" id="ni-number8" width="10"></td>
-          <td width="50%"><label class="heading-xsmall" for="ni-number8">&nbsp;Mobile number</label>
-            
-            <!--    <label class="heading-xsmall" for="ni-number8">Mobile Number</label>-->
-            
-            <input name="mobno" type="text" class="form-control" id="mobno" onKeyup="autotab(this, document.form4.eyes)" size="11" maxlength="11"></td>
-        </tr>
-      </table>
+        
+      
+        
+  
+      
       <p>&nbsp;</p>
     </form></p>
         </div>
         <div class="column-third">
-           <div id="RefNo2"class="heading-xsmall" align="right"> Ref:000 000 000 </div>
+           
   
      <form id="form4" name="form4" method="post" action="">
-       <p>
-         <label class="heading-xsmall" for="full-name2">         Eyesight</label>
+       
+         <p class="fields"><label class="heading-xsmall" for="full-name2">Eyesight</label></P>
          <select name="eyes" id="eyes">
            <option value="No glases">No glasses</option>
            <option value="Glasses">Glasses</option>
          </select>
        </p>
+
     </form>
+
     <form id="organform" name="organform" method="post" action="">
+      <p class="fields"><label class="heading-xsmall" >Organ donation</label></P>
       <label>
-        <input type="checkbox" name="organform" id="all" onClick="toggle(this)"/>
+        <input type="checkbox" name="organform" id="all" onClick="toggle2(this)"/>
       <span class="bold-xsmall">All</span></label>
       <br>
       <label>
-        <input type="checkbox" name="organform" id="alltissue" onClick="toggletissue(this)" />
+        <input type="checkbox" name="organform" id="alltissue" onClick="toggletissue2(this)" />
         <span class="bold-xsmall">All with tissue</span></label>
       <br>
       <label>
@@ -372,7 +620,7 @@
         <span class="bold-xsmall">Pancreas </span></label>
       <br>
       <label>
-        <input type="checkbox" name="organform"id="withdraw"onClick="togglewithdraw(this)"/>
+        <input type="checkbox" name="organform"id="withdraw"onClick="togglewithdraw2(this)"/>
         <span class="bold-xsmall">Withdraw consent</span></label>
       </p>
     </form>
@@ -380,7 +628,7 @@
             
             
             
-          <p><input name="Submit" type="button" class="button" id="Sibmit" value="Submit"onClick="Starten()" > </p>
+          <p><input name="Submit" type="button" class="button" id="Sibmit" value="Submit"onClick="Submiten()" > </p>
           <p>&nbsp;</p>
   </div>
         </div>

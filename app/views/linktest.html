@@ -1,0 +1,88 @@
+{{<layout}}
+
+{{$pageTitle}}Change of Address{{/pageTitle}}
+
+{{$content}}
+<main id="content" role="main">
+  <header class="page-header">
+
+
+
+
+<script>
+function toggle2() {
+  
+  // if (document.getElementById("tick1").checked == true);
+{
+ // window.open("COA.html");
+ document.getElementById("tick2").checked = false;
+}
+</script>
+
+<script>
+function toggletissue2() {
+  checkboxes = document.getElementsByName('organform');
+  for(var i=0, n=checkboxes.length;i<n;i++) {
+    checkboxes[i].checked = source.checked;
+  }
+ document.getElementById("all").checked = false;
+ document.getElementById("withdraw").checked = false;
+}
+
+ </script>
+
+
+
+<script>
+
+function Submiten() { 
+ var x;
+    if (confirm("Confirm that the details you have entered are correct") == true) {
+        x = "You pressed OK!";
+    window.open("COA.html");
+    } else {
+        x = "You pressed Cancel!";
+    }
+    
+ }
+</script>
+
+
+
+  </header>
+
+
+
+<!--   <details open >
+
+  <summary role="button" aria-controls="details-content-1" tabindex="0" aria-expanded="true">
+  <span class="heading-small">Current Information</span>
+  </summary> -->
+
+    <!-- <div > -->
+    
+    <form id="tickboxes" name="tickboxes" method="post" action="">
+      <p class="fields"><label class="heading-xsmall" >form</label></P>
+      <label>
+        <input type="checkbox" name="tickboxes" id="tick1" onClick="toggle2()"/>
+      <span class="bold-xsmall">tick 1</span></label>
+      <br>
+      <label>
+        <input type="checkbox" name="tickboxes" id="tick2" onClick="toggletissue2()" />
+        <span class="bold-xsmall">tick 2</span></label>
+      
+      </p>
+    </form>
+      
+            
+            
+            
+          <p><input name="Submit" type="button" class="button" id="Sibmit" value="Submit"onClick="Submiten()" > </p>
+       
+ 
+
+</body>
+</main>
+{{/content}}
+
+{{/layout}}
