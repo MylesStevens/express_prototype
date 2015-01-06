@@ -5,95 +5,82 @@
 {{$content}}
 <main id="content" role="main">
   <header class="page-header">
-    <h3 class="heading-medium">
-      Search
-    </h3>
   </header>
   <body>
-    <hr>
-  	<h4 class="heading-small">Section 1</h4>
+  	
   
     <div class="example example-grid">
+      <h4 class="heading-small">Section 1</h4>
       <div class="grid-row">
-        <div class="column-two-thirds">
-          <p><label class="form-label" for="full-name-f1">Reason for viewing record</label>
-          <label class="block-label" for="radio-1">
-        	<input id="radio-1" type="radio" name="radio-group" value="Customer Enquiry Telephone">
-        		Customer Enquiry Telephone
-      		</label>
-      	<label class="block-label" for="radio-2">
-        <input id="radio-2" type="radio" name="radio-group" value="Customer (Off line)">
-        Customer (Offline)
-      </label>
-      <label class="block-label" for="radio-3">
-        <input id="radio-3" type="radio" name="radio-group" value="Data Integrity Check">
-        Data Integrity Check
-      </label>
-      <label class="block-label" for="radio-4">
-        <input id="radio-4" type="radio" name="radio-group" value="Data IRecord compliance">
-        Record compliance
-      </label>
-      </P>
-   
+        <div class="column-half">
+
+            <p class ="fields"><label class="heading-xsmall" for="reason">
+              Reason for viewing record</label></P>
+            <select  name="Reason" id="Reason" >
+              <option value="Choose reason...">Choose reason...</option>
+              <option value="Change Address" selected>Customer Enquiry Telephone</option>
+              <option value="Replace">Customer (Offline)</option>
+              <option value="Renew">Data Integrity Check</option>
+              <option value="1st Application">Record compliance</option>
+            </select>
+
+      <p class ="fields"><label class="heading-xsmall" for="DR-number3">Driver Number</label></P>
+      <input type="text"  class="form-control-3-4-small" id="DR-number3"  onKeyup="autotab2(this, document.form1.Issuenumber2)" onKeyDown="if (event.keyCode == 9) tabcheck()" maxlength="16" />
+      
+    </div>
    	 </div>
-        
-      </div>
-    </div>
-    <p>
-   	<div>
-      <label class="form-label" for="dnum">Driver number</label>
-      <input class="form-control" id="full-name-f1" type="text">
-  	</div>
-  </p>
-
-       
- <hr>
-  <h4 class="heading-small">Section 2</h4>
-  <p>
-   	<div>
-  <label class="form-label" for="full-name-f1">Surname</label>
-      <input class="form-control" id="surname" type="text">
-      	</div>
-  </p>
-
-    <div class="example example-grid">
+  <div class="example example-grid">
+      
       <div class="grid-row">
-        <div class="column-half">
-          <p>
-      <label class="form-label" for="full-name-f1">Forename 1</label>
-      <input class="form-control" id="forenam1" type="text"></p>
-      <p><label class="form-label" for="full-name-f1">Gender</label>
-      <label class="block-label" for="radio-1">
-        	<input id="radio-1" type="radio" name="radio-group2" value="Female">
-        		Female
-      		</label>
-      	<label class="block-label" for="radio-2">
-        <input id="radio-2" type="radio" name="radio-group2" value="Male">
-        Male</P>
-      </label>
-        </div>
-        <div class="column-half">
-          <p><label class="form-label" for="full-name-f1">Forename 2</label>
-      <input class="form-control" id="forename2" type="text"></p>
-      <p><label class="form-label" for="full-name-f1">Date of Birth</label>
-      <input class="form-control" id="dob" type="text"></p>
-        </div>
-      </div>
-    </div>
- <hr>
+        <div class="column-third">
+          <h4 class="heading-small">Section 2</h4>
 
-  <h4 class="heading-small">Section 3</h4>
+          <p class ="fields"><label class="heading-xsmall" for="full-name-f1">Surname</label></p>
+      <input  type="text" class="form-control-3-4-small" id="surname" > 
+
+      
+
+      <p class ="fields"><label class="heading-xsmall" for="full-name-f1">Forename 1</label></P>
+      <input class="form-control-3-4-small" id="forenam1" type="text"> 
     
-    <div>
-  <label class="form-label" for="full-name-f1">House number/name</label>
-      <input class="form-control" id="House number" type="text">
-        </div>
-  </p>
-  <p>
-    <div>
-  <label class="form-label" for="full-name-f1">Post code</label>
-      <input class="form-control" id="postcode" type="text">
-        </div>
+
+    <p class ="fields"><label class="heading-xsmall" for="full-name-f1">Gender</label></P>
+       <label class="block-label" for="radio-1">
+        <input id="radio-1" type="radio" name="radio-group2" value="Female">
+            Female
+        </label> </p>
+        <p><label class="block-label" for="radio-2">
+        <input id="radio-2" type="radio" name="radio-group2" value="Male">
+        Male
+    
+  </div>
+    <div class="column-third">
+          <h4 class="heading-small"></h4>
+
+      <br>
+      <br>
+      <br>
+      <p class ="fields"><label class="heading-xsmall" for="full-name-f1">Forename 2</label></P>
+      <input class="form-control-3-4-small" id="forenam2" type="text"> 
+
+      <p class ="fields"><label class="heading-xsmall" for="full-name-f1">Date of birth</label></P>
+      <input class="form-control-1-2" id="forenam1" type="text"> 
+    
+
+  </div>
+ </div>
+    
+
+<div class="grid-row">
+  
+    <div class="column-half">
+      <h4 class="heading-small">Section 3</h4>
+    
+  <p class="fields"><label class="heading-xsmall" for="ni-number2">House number/name </label></p>
+          <input type="text" class="form-control-3-4-small"  id="housenumber" >
+
+          <p class="fields"><label class="heading-xsmall" for="ni-number5">Post code</label></p>
+          <input type="text" class="form-control-1-4-small" id="ni-number5" onKeyDown="if (event.keyCode == 13) document.getElementById('Findaddress1').click()"></p>
   <p></p>
 <div class="example">
       <button class="button button-get-started">Start now</button>

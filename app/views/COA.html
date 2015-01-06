@@ -16,19 +16,57 @@ function autotab(current,to){
 </script>
 
 <script>
-function autotab2(current,to){
-    if (current.getAttribute && 
-      current.value.length==current.getAttribute("maxlength")) {
+   var currentfield1V =" \n&nbsp";
+   var currentfield2V =" \n&nbsp";
+   var currentfield3V = " \n&nbsp";
+   var currentfield4V = " \n&nbsp";
+  function autotab2(current,to){
+
+
+
+var refnov = "ref:000 000 000";
+var titlefieldV = " \n&nbsp";
+var GenderV = " \n&nbsp";
+var SurnamefieldV = " \n&nbsp";
+var forefieldV = " \n&nbsp";
+var dobfieldV = " \n&nbsp";
+    currentfield1V = " \n&nbsp";
+    currentfield2V =" \n&nbsp";
+    currentfield3V = " \n&nbsp";
+    currentfield4V = " \n&nbsp";
+var phonenumberfieldV = " \n&nbsp";
+var emailfieldV = " \n&nbsp";
+var drivernofieldV = " \n&nbsp";
+var issuefieldV = " \n&nbsp";
+var statusV = " \n&nbsp";
+var validfrfieldV = " \n&nbsp";
+var validtofieldV = " \n&nbsp";
+var photoexpfieldV = " \n&nbsp";
+foundaddress =" \n&nbsp";
+
+var photoV = "../public/images/samplephoto_blank.png"
+var signaV = "../public/images/samplesig_blank.png"
+
+var s1 = document.forms["form1"]["DR-number3"].value;
+
+s1 = s1.toUpperCase();
+
+
+  
+
+// PRMO807045OD0KM
+    if (s1=="PRMO757022D09KM"){
+      document.getElementById('DR-number3').style.border = "1px solid #bfc1c3";
         var refnov = "Ref:123 456 789";
     var titlefieldV = "Mrs";
     var GenderV = "Female";
     var SurnamefieldV = "Prmrowxyz";
     var forefieldV = "Dynaomo Oswald";
     var dobfieldV = "O2 07 1972";
-    var currentfield1V = "75 Cloud Lane";
-    var currentfield2V = "Lothlorien";
-    var currentfield3V = "Swansea";
-    var currentfield4V = "SA6 7JL";
+        currentfield1V = "75 Cloud Lane";
+        currentfield2V = "Lothlorien";
+        currentfield3V = "Swansea";
+        currentfield4V = "SA6 7JL";
     var phonenumberfieldV = "01792 520584";
     var emailfieldV = "Dynaomo.Prmrowxyz@freemail.com";
     var drivernofieldV = "PRMO807045OD0KM";
@@ -37,9 +75,85 @@ function autotab2(current,to){
     var validfrfieldV = "21 07 2011"
     var validtofieldV = "21 07 2018"
     var photoexpfieldV = "21 07 2018"
+    var photoV = "../public/images/samplephoto.png"
+    var signaV = "../public/images/samplesig.png"
+
+    foundaddress = "244 Mud Place\nImladris\nSwansea\nSA5 8ET"
+
+    document.getElementById("drivernumberror").innerHTML = "";
+ 
+    Issuenumber2.focus() 
+
+// FIRED560012A99XZ
+}   else if (s1=="FIRED560012A99XZ"){
+      document.getElementById('DR-number3').style.border = "1px solid #bfc1c3";
+        var refnov = "Ref:123 456 790";
+    var titlefieldV = "Mrs";
+    var GenderV = "Female";
+    var SurnamefieldV = "Firedrakes";
+    var forefieldV = "Alicia";
+    var dobfieldV = "01 10 52";
+        currentfield1V = "1 North Road";
+        currentfield2V ="High Wycombe";
+        currentfield3V = "";
+        currentfield4V = "HP15 2LY";
+    var phonenumberfieldV = " \n&nbsp";
+    var emailfieldV = " \n&nbsp";
+    var drivernofieldV = "FIRED560012A99XZ";
+    var issuefieldV = "05";
+    var statusV = "Full"
+    var validfrfieldV = "21 07 2011"
+    var validtofieldV = "21 07 2018"
+    var photoexpfieldV = "21 07 2018"
+    var photoV = "../public/images/samplephotoFIR.png"
+    var signaV = "../public/images/samplesigFIR.png"
+
+    foundaddress ="2 Friendship Lane\nBanbury\nOX15 3HZ";
+
+    document.getElementById("drivernumberror").innerHTML = "";
+
+    Issuenumber2.focus() 
+
+    // BRAND705104R99YZ
+ }   else if (s1=="BRAND705104R99YZ" && current.getAttribute && 
+      current.value.length==current.getAttribute("maxlength")){
+      document.getElementById('DR-number3').style.border = "1px solid #bfc1c3";
+        var refnov = "Ref:123 456 791";
+    var titlefieldV = "Mr";
+    var GenderV = "Male";
+    var SurnamefieldV = "Brandybuck";
+    var forefieldV = "Rhys";
+    var dobfieldV = "10 05 74";
+        currentfield1V = "31 Pellenor Fields";
+        currentfield2V ="Ithilien";
+        currentfield3V = "Birmingham";
+        currentfield4V = "CV1 2AQ";
+    var phonenumberfieldV = " \n&nbsp";
+    var emailfieldV = " \n&nbsp";
+    var drivernofieldV = "BRAND705104R99YZ";
+    var issuefieldV = "03";
+    var statusV = "Full";
+    var validfrfieldV = "21 07 2011"
+    var validtofieldV = "21 07 2018"
+    var photoexpfieldV = "21 07 2018"
+  var photoV = "../public/images/samplephotoBRA.png"
+    var signaV = "../public/images/samplesigBRA.png"
+
+    foundaddress ="1 Bag End\nHobbiton\nCoventry\nCV1 2AQ";
+    
+
+    document.getElementById("drivernumberror").innerHTML = "";
+ 
+    Issuenumber2.focus() 
 
 
-  //also change the ref number
+} else if (current.getAttribute && 
+      current.value.length==current.getAttribute("maxlength")) {
+        document.getElementById('DR-number3').style.border = "4px solid red";
+        document.getElementById("drivernumberror").innerHTML = "Driver number not found";
+
+        } 
+  //SET VARIABLES
   document.getElementById("RefNo2").innerHTML = refnov;
   document.getElementById("titlefield").innerHTML = titlefieldV;
   document.getElementById("genderfield").innerHTML = GenderV;
@@ -50,7 +164,6 @@ function autotab2(current,to){
   document.getElementById("currentfield2").innerHTML = currentfield2V;
   document.getElementById("currentfield3").innerHTML = currentfield3V;
   document.getElementById("currentfield4").innerHTML = currentfield4V;
-
   document.getElementById("phonenumberfield").innerHTML = phonenumberfieldV;
   document.getElementById("emailfield").innerHTML = emailfieldV;
   document.getElementById("drivernofield").innerHTML = drivernofieldV;
@@ -60,88 +173,42 @@ function autotab2(current,to){
   document.getElementById("validtofield").innerHTML = validtofieldV;
   document.getElementById("photoexpfield").innerHTML = photoexpfieldV;
 
-  document.photoimg.src = "../public/images/samplephoto.png"
-  document.sigimg.src = "../public/images/samplesig.png"
-  document.getElementById("housenumber").focus();   
-        to.focus() 
-        }
+  document.photoimg.src = photoV
+  document.sigimg.src = signaV
 }
 </script>
 
+
+<script >
+function tabcheck() {
+  var s1 = document.forms["form1"]["DR-number3"].value;
+  
+  if (s1 != ""){
+    document.getElementById('DR-number3').style.border = "4px solid red";
+    document.getElementById("drivernumberror").innerHTML = "Driver number not found";
+  } else {
+    document.getElementById('DR-number3').style.border = "1px solid #bfc1c3";
+    document.getElementById("drivernumberror").innerHTML = "";
+  }
+}
+</script>
+
+
 <script>
   function FindAddress2() { 
-
-  var textToAppend ="244 Mud Place\nImladris\nSwansea\nSA5 8ET"
-    
+    var textToAppend =foundaddress
     document.getElementById('Address3').value = textToAppend;
   }
 </script>
 
+
 <script>
   function PopulateAddress() { 
- 
-  var textToAppend = "75 Cloud Lane\nLothlorien\nSwansea\nSA6 7JL"
+    var textToAppend = currentfield1V + "\n" + currentfield2V + "\n" + currentfield3V + "\n" + currentfield4V 
     document.getElementById('Address3').value = textToAppend;
  } 
 </script>
 
-
-
-
-
-<script>
-
-//   function changeImage() {
-
-//     var refnov = "Ref:123 456 789";
-//     var titlefieldV = "Mrs";
-//     var GenderV = "Female";
-//     var SurnamefieldV = "Prmrowxyz";
-//     var forefieldV = "Dynaomo Oswald";
-//     var dobfieldV = "O2 07 1972";
-//     var currentfield1V = "75 Cloud Lane";
-//     var currentfield2V = "Lothlorien";
-//     var currentfield3V = "Swansea";
-//     var currentfield4V = "SA6 7JL";
-//     var phonenumberfieldV = "01792 520584";
-//     var emailfieldV = "Dynaomo.Prmrowxyz@freemail.com";
-//     var drivernofieldV = "PRMO807045OD0KM";
-//     var issuefieldV = "05"
-//     var statusV = "Full"
-//     var validfrfieldV = "21 07 2011"
-//     var validtofieldV = "21 07 2018"
-//     var photoexpfieldV = "21 07 2018"
-
-
-//   //also change the ref number
-//   document.getElementById("RefNo2").innerHTML = refnov;
-//   document.getElementById("titlefield").innerHTML = titlefieldV;
-//   document.getElementById("genderfield").innerHTML = GenderV;
-//   document.getElementById("Surnamefield").innerHTML = SurnamefieldV;
-//   document.getElementById("forefield").innerHTML = forefieldV;
-//   document.getElementById("dobfield").innerHTML = dobfieldV;
-//   document.getElementById("currentfield1").innerHTML = currentfield1V;
-//   document.getElementById("currentfield2").innerHTML = currentfield2V;
-//   document.getElementById("currentfield3").innerHTML = currentfield3V;
-//   document.getElementById("currentfield4").innerHTML = currentfield4V;
-
-//   document.getElementById("phonenumberfield").innerHTML = phonenumberfieldV;
-//   document.getElementById("emailfield").innerHTML = emailfieldV;
-//   document.getElementById("drivernofield").innerHTML = drivernofieldV;
-//   document.getElementById("issuefield").innerHTML = issuefieldV;
-//   document.getElementById("statusfield").innerHTML = statusV;
-//   document.getElementById("validfrfield").innerHTML = validfrfieldV;
-//   document.getElementById("validtofield").innerHTML = validtofieldV;
-//   document.getElementById("photoexpfield").innerHTML = photoexpfieldV;
-
-//   document.photoimg.src = "../public/images/samplephoto.png"
-//   document.sigimg.src = "../public/images/samplesig.png"
-//   document.getElementById("housenumber").focus();   
-
-// }
-
-
-// </script>
 
 <script>
 function toggle2(source) {
@@ -154,6 +221,7 @@ function toggle2(source) {
 }
 </script>
 
+
 <script>
 function toggletissue2(source) {
   checkboxes = document.getElementsByName('organform');
@@ -163,10 +231,10 @@ function toggletissue2(source) {
  document.getElementById("all").checked = false;
  document.getElementById("withdraw").checked = false;
 }
+</script>
 
- </script>
 
- <script>
+<script>
 function togglewithdraw2(source) {
  document.getElementById("all").checked = false;
  document.getElementById("alltissue").checked = false;
@@ -176,12 +244,11 @@ function togglewithdraw2(source) {
  document.getElementById("pancreas").checked = false;
  document.getElementById("corneas").checked = false;
  document.getElementById("liver").checked = false;
- 
 }
 </script>
 
-<script>
 
+<script>
 function Submiten() { 
  var x;
     if (confirm("Confirm that the details you have entered are correct") == true) {
@@ -189,10 +256,10 @@ function Submiten() {
     window.open("COA.html");
     } else {
         x = "You pressed Cancel!";
-    }
-    
+    }   
  }
 </script>
+
 
 <script>
 function emailformat() {
@@ -200,11 +267,7 @@ function emailformat() {
     var atpos = x.indexOf("@");
     var dotpos = x.lastIndexOf(".");
     if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-     
-      document.getElementById('email').style.border = "3px solid red";
-
-  
-        // alert("Not a valid e-mail address");
+      document.getElementById('email').style.border = "4px solid red";
         return false;
       }
         else {
@@ -213,6 +276,7 @@ function emailformat() {
 }
 </script>
 
+
 <script >
 function numbersonly(e){
 var unicode=e.charCode? e.charCode : e.keyCode
@@ -220,12 +284,10 @@ if (unicode!=8){ //if the key isn't the backspace key (which we should allow)
 if (unicode<48||unicode>57) //if not a number
 return false //disable key press
 }
-}
 </script>
 
 
-
-  </header>
+</header>
 
 
 
@@ -312,7 +374,7 @@ return false //disable key press
            
             <p class ="fields"><label class="heading-xsmall" for="reason">
               Reason for Issue</label></P>
-            <select class="form-control-1-2-small" name="Reason" id="Reason" >
+            <select  name="Reason" id="Reason" >
               <option value="Choose reason...">Choose reason...</option>
               <option value="Change Address" selected>Change Address</option>
               <option value="Replace">Replace</option>
@@ -320,8 +382,12 @@ return false //disable key press
               <option value="1st Application">1st Application</option>
             </select>
 
+           <!--  <p class ="fields"><label class="heading-xsmall" for="DR-number3">Driver Number</label></p>
+            <input type="text"  class="form-control-small" id="DR-number3" onKeyup="autotab2(this, document.form1.Issuenumber2)"value="" maxlength="16" autofocus/> -->
+
             <p class ="fields"><label class="heading-xsmall" for="DR-number3">Driver Number</label></p>
-            <input type="text"  class="form-control-small" id="DR-number3" onKeyup="autotab2(this, document.form1.Issuenumber2)"value="" maxlength="16" autofocus/>
+            <input type="text"  class="form-control-small" id="DR-number3"  onKeyup="autotab2(this, document.form1.Issuenumber2)" onKeyDown="if (event.keyCode == 9) tabcheck()" maxlength="16" autofocus/>
+            <p class ="dataerror" id="drivernumberror"> </p>
 
             <p class ="fields"><label class="heading-xsmall" for="Issuenumber2"> Issue Number </label></p>
             <input type="text" class="form-control-1-4-small" id="Issuenumber2" onkeypress="return numbersonly(event)" onKeyup="autotab(this, document.form2.housenumber)" value="" maxlength="2"></p>
@@ -342,7 +408,7 @@ return false //disable key press
   
            <input name="Findaddress1" type="button" class="button" value="Find Address" onclick="FindAddress2()" />
             
-          <input name="popaddress1" type="button" class="button-secondary" value="Populate Address" onclick="PopulateAddress()" />
+          <input name="popaddress1" type="button" class="button-secondary" value="Current Address" onclick="PopulateAddress()" />
     
     </form>
  <!-- SAME ORDER AS D1 STOP CHANGING THINGS ROUND -->       

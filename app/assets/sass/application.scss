@@ -96,6 +96,12 @@
     font-size: 14px;
     color: black;}
 
+  p.dataerror { 
+    margin-top: 0.0m;
+    margin-bottom: 0.5em;
+    font-size: 14px;
+    color: red;}
+
   p.fields { 
     margin-top: 0.5em;
    margin-bottom: 0.05em;
@@ -130,3 +136,29 @@
   line-height: 1.0;
   font-weight: 400;
   }
+
+
+.block-label {
+  display: block;
+  float: none;
+  clear: left;
+  position: relative;
+  background: #dee0e2;
+  font-size: 16px;
+  border: 1px solid #dee0e2;
+  padding: 8px 30px 5px 45px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  cursor: pointer; }
+  @media (min-width: 641px) {
+    .block-label {
+      float: left;
+      margin-top: 1px;
+      margin-bottom: 1px; } }
+  .block-label input {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    cursor: pointer; }
+  .block-label:hover {
+    border-color: #0b0c0c; }

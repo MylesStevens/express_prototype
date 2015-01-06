@@ -218,9 +218,14 @@ fieldset {
       width: 100%; } }
 
       .form-control-3-4-small {
-  width: 100%; }
+  width: 75%; 
+  font-size: 14px;
+  line-height: 0.7;
+  padding: 1px;}
   @media (min-width: 641px) {
     .form-control-3-4 {
+    line-height: 0.7;
+  padding: 1px;
       width: 75%; } }
 
 .form-control-1-2-small {
