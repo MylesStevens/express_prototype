@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>UK Postcode Validation with JavaScript</title>
+
+<script language="JavaScript">
+
+function postcode_validate(postcode)
+{
+
+var regPostcode = /^([a-zA-Z]){1}([0-9][0-9]|[0-9]|[a-zA-Z][0-9][a-zA-Z]|[a-zA-Z][0-9][0-9]|[a-zA-Z][0-9]){1}([ ])([0-9][a-zA-z][a-zA-z]){1}$/;
+
+if(regPostcode.test(postcode) == false)
+{
+
+document.getElementById("status").innerHTML = "Postcode is not yet valid.";
+
+}
+else
+{
+
+document.getElementById("status").innerHTML = "You have entered a valid postcode!"; 
+
+}
+}
+
+</script>
+
+
+</head>
+<body>
+
+<div>
+<span id="status">Please enter a valid postcode.</span><br>
+<input type="text" name="postcode" onKeyDown="if (event.keyCode == 9)postcode_validate(this.value)"> 
+</div>
+
+</body>
+</html>

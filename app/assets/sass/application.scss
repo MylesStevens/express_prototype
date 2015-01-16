@@ -81,7 +81,7 @@
 .column-quarter {
   padding: 0 15px;
   box-sizing: border-box; 
-  margin-top: 1.0em;
+  //margin-top: 1.0em;
   //background-color: #456e40;
     //background-color: #e6e6e6;
     }
@@ -128,6 +128,18 @@
   //background-color: #456e40; }
   background-color: #e6e6e6;}
 
+  .grid-row-inline {
+  margin-top: 10px;
+    margin-bottom: 10px;
+    //width: 75%;
+    text-align:center
+   
+  }
+
+
+   
+  
+
   .button-secondary {
     @include button ($grey-3);
     font-family: "nta", Arial, sans-serif;
@@ -162,3 +174,10 @@
     cursor: pointer; }
   .block-label:hover {
     border-color: #0b0c0c; }
+
+
+  .starthidden {
+  display: none;
+  border: 4px solid $yellow;
+  width: 75%;
+  }

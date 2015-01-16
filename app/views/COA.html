@@ -16,6 +16,22 @@ function autotab(current,to){
 </script>
 
 <script>
+function autotabphone(){
+    
+    var regphonenumber = /^([a-zA-Z]){1}([0-9][0-9]|[0-9]|[a-zA-Z][0-9][a-zA-Z]|[a-zA-Z][0-9][0-9]|[a-zA-Z][0-9]){1}([0-9][a-zA-z][a-zA-z]){1}$/;
+var regphonenumber2 = /^([a-zA-Z]){1}([0-9][0-9]|[0-9]|[a-zA-Z][0-9][a-zA-Z]|[a-zA-Z][0-9][0-9]|[a-zA-Z][0-9]){1}([ ])([0-9][a-zA-z][a-zA-z]){1}$/;
+
+    
+     document.getElementById('daytel').style.border = "4px solid red";
+ 
+
+    
+    
+}
+
+</script>
+
+<script>
    var currentfield1V =" \n&nbsp";
    var currentfield2V =" \n&nbsp";
    var currentfield3V = " \n&nbsp";
@@ -54,7 +70,7 @@ s1 = s1.toUpperCase();
 
   
 
-// PRMO807045OD0KM
+// PRMO757022D09KM
     if (s1=="PRMO757022D09KM"){
       document.getElementById('DR-number3').style.border = "1px solid #bfc1c3";
         var refnov = "Ref:123 456 789";
@@ -69,7 +85,7 @@ s1 = s1.toUpperCase();
         currentfield4V = "SA6 7JL";
     var phonenumberfieldV = "01792 520584";
     var emailfieldV = "Dynaomo.Prmrowxyz@freemail.com";
-    var drivernofieldV = "PRMO807045OD0KM";
+    var drivernofieldV = "PRMO757022D09KM";
     var issuefieldV = "05"
     var statusV = "Full"
     var validfrfieldV = "21 07 2011"
@@ -193,12 +209,58 @@ function tabcheck() {
 }
 </script>
 
+<script>
+
+function postcode_validate(postcode)
+{
+var regPostcode = /^([a-zA-Z]){1}([0-9][0-9]|[0-9]|[a-zA-Z][0-9][a-zA-Z]|[a-zA-Z][0-9][0-9]|[a-zA-Z][0-9]){1}([0-9][a-zA-z][a-zA-z]){1}$/;
+var regPostcode2 = /^([a-zA-Z]){1}([0-9][0-9]|[0-9]|[a-zA-Z][0-9][a-zA-Z]|[a-zA-Z][0-9][0-9]|[a-zA-Z][0-9]){1}([ ])([0-9][a-zA-z][a-zA-z]){1}$/;
+var postcodekeyed = document.forms["form2"]["pcode"].value;
+
+if(regPostcode.test(postcodekeyed) == false && regPostcode2.test(postcodekeyed) == false) {
+
+document.getElementById("postcodeerror").innerHTML = "Postcode is not valid";
+document.getElementById('pcode').style.border = "4px solid red"; 
+
+}
+else{
+ document.getElementById("postcodeerror").innerHTML = "";
+ document.getElementById('pcode').style.border = "1px solid #bfc1c3"; 
+ 
+}
+
+}
+
+</script>
+
 
 <script>
   function FindAddress2() { 
-    var textToAppend =foundaddress
-    document.getElementById('Address3').value = textToAppend;
+    
+    var regPostcode = /^([a-zA-Z]){1}([0-9][0-9]|[0-9]|[a-zA-Z][0-9][a-zA-Z]|[a-zA-Z][0-9][0-9]|[a-zA-Z][0-9]){1}([0-9][a-zA-z][a-zA-z]){1}$/;
+    var regPostcode2 = /^([a-zA-Z]){1}([0-9][0-9]|[0-9]|[a-zA-Z][0-9][a-zA-Z]|[a-zA-Z][0-9][0-9]|[a-zA-Z][0-9]){1}([ ])([0-9][a-zA-z][a-zA-z]){1}$/;
+    var postcodekeyed = document.forms["form2"]["pcode"].value;
+
+if(regPostcode.test(postcodekeyed) == false && regPostcode2.test(postcodekeyed) == false) {
+
+document.getElementById("postcodeerror").innerHTML = "Postcode is not valid";
+document.getElementById('pcode').style.border = "4px solid red"; 
+daytel.focus()
+
+}
+else{
+ document.getElementById("postcodeerror").innerHTML = "";
+ document.getElementById('pcode').style.border = "1px solid #bfc1c3"; 
+ 
+ var textToAppend = foundaddress
+ document.getElementById('Address3').value = textToAppend;
+ daytel.focus()
+ 
+}
   }
+
+daytel.focus()
+
 </script>
 
 
@@ -211,15 +273,15 @@ function tabcheck() {
 
 
 <script>
-function toggle2(source) {
-  checkboxes = document.getElementsByName('organform');
-  for(var i=0, n=checkboxes.length;i<n;i++) {
-    checkboxes[i].checked = source.checked;
-  }
- document.getElementById("alltissue").checked = false;
- document.getElementById("withdraw").checked = false;
-}
-</script>
+// function toggle2(source) {
+//   checkboxes = document.getElementsByName('organform');
+//   for(var i=0, n=checkboxes.length;i<n;i++) {
+//     checkboxes[i].checked = source.checked;
+//   }
+//  document.getElementById("alltissue").checked = false;
+//  document.getElementById("withdraw").checked = false;
+// }
+// </script>
 
 
 <script>
@@ -228,7 +290,7 @@ function toggletissue2(source) {
   for(var i=0, n=checkboxes.length;i<n;i++) {
     checkboxes[i].checked = source.checked;
   }
- document.getElementById("all").checked = false;
+ // document.getElementById("all").checked = false;
  document.getElementById("withdraw").checked = false;
 }
 </script>
@@ -236,7 +298,7 @@ function toggletissue2(source) {
 
 <script>
 function togglewithdraw2(source) {
- document.getElementById("all").checked = false;
+ // document.getElementById("all").checked = false;
  document.getElementById("alltissue").checked = false;
  document.getElementById("heart").checked = false;
  document.getElementById("lungs").checked = false;
@@ -250,13 +312,9 @@ function togglewithdraw2(source) {
 
 <script>
 function Submiten() { 
- var x;
-    if (confirm("Confirm that the details you have entered are correct") == true) {
-        x = "You pressed OK!";
-    window.open("COA.html");
-    } else {
-        x = "You pressed Cancel!";
-    }   
+ 
+    window.location.href ="COA.html";
+   
  }
 </script>
 
@@ -266,25 +324,90 @@ function emailformat() {
     var x = document.forms["form3"]["email"].value;
     var atpos = x.indexOf("@");
     var dotpos = x.lastIndexOf(".");
-    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+   
+    // if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length ) {
+      if (x != "" ) {
+        if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length ) {
       document.getElementById('email').style.border = "4px solid red";
+      document.getElementById("emailerror").innerHTML = "Not in email address format e.g. name@company.com";
+
         return false;
       }
         else {
         document.getElementById('email').style.border = "1px solid #bfc1c3"; 
-    }
-}
+        document.getElementById("emailerror").innerHTML = "";
+    }}
+        else {
+        document.getElementById('email').style.border = "1px solid #bfc1c3"; 
+        document.getElementById("emailerror").innerHTML = "";
+  }}
+
+
 </script>
 
 
 <script >
-function numbersonly(e){
-var unicode=e.charCode? e.charCode : e.keyCode
-if (unicode!=8){ //if the key isn't the backspace key (which we should allow)
-if (unicode<48||unicode>57) //if not a number
-return false //disable key press
+function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
 }
 </script>
+
+<script>
+    function showhide() {
+     var DRnumcheck = document.forms["form1"]["DR-number3"].value;
+     var Issuenumber2check = document.forms["form1"]["Issuenumber2"].value;
+     var housenumbercheck = document.forms["form2"]["housenumber"].value;
+     var pcodecheck = document.forms["form2"]["pcode"].value;
+     var Addresscheck = document.forms["form3"]["Address3"].value;
+     var daytelcheck = document.forms["form3"]["daytel"].value;
+     var mobnocheck = document.forms["form3"]["mobno"].value;
+     var emailcheck = document.forms["form3"]["email"].value;
+     var countborncheck = document.forms["form3"]["countrybornin"].value;
+      
+      var divee = document.getElementById( "hide_show" );
+      var divee2 = document.getElementById( "hide_show2" );
+
+       if ( divee.style.display !== "none" ) {
+            divee.style.display = "none";
+            divee2.style.display = "block";
+          
+          if (DRnumcheck !== ""){
+          document.getElementById('DR-number3').style.border = "4px solid #FFBF47";
+          }
+          if (Issuenumber2check !== ""){
+          document.getElementById('Issuenumber2').style.border = "4px solid #FFBF47";
+          }
+          if (housenumbercheck !== "" || pcodecheck !== "" ){
+          document.getElementById('housenumber').style.border = "4px solid #FFBF47";
+          document.getElementById('pcode').style.border = "4px solid #FFBF47";
+          document.getElementById('Address3').style.border = "4px solid #FFBF47";
+          }
+          if (daytelcheck !== ""){
+          document.getElementById('daytel').style.border = "4px solid #FFBF47";
+          }
+          if (mobnocheck !== ""){
+          document.getElementById('mobno').style.border = "4px solid #FFBF47";
+          }
+          if (emailcheck !== ""){
+          document.getElementById('email').style.border = "4px solid #FFBF47";
+          }
+          if (countborncheck !== ""){
+          document.getElementById('countrybornin').style.border = "4px solid #FFBF47";
+          }
+           
+        } 
+       Submit2.focus() 
+        }
+
+    
+</script>
+
+  
 
 
 </header>
@@ -386,11 +509,11 @@ return false //disable key press
             <input type="text"  class="form-control-small" id="DR-number3" onKeyup="autotab2(this, document.form1.Issuenumber2)"value="" maxlength="16" autofocus/> -->
 
             <p class ="fields"><label class="heading-xsmall" for="DR-number3">Driver Number</label></p>
-            <input type="text"  class="form-control-small" id="DR-number3"  onKeyup="autotab2(this, document.form1.Issuenumber2)" onKeyDown="if (event.keyCode == 9) tabcheck()" maxlength="16" autofocus/>
+            <input type="text"  class="form-control-small" id="DR-number3"  onKeyup="autotab2(this, document.form1.Issuenumber2)" onKeyDown="if (event.keyCode == 9) tabcheck()" maxlength="15" autofocus/>
             <p class ="dataerror" id="drivernumberror"> </p>
 
             <p class ="fields"><label class="heading-xsmall" for="Issuenumber2"> Issue Number </label></p>
-            <input type="text" class="form-control-1-4-small" id="Issuenumber2" onkeypress="return numbersonly(event)" onKeyup="autotab(this, document.form2.housenumber)" value="" maxlength="2"></p>
+            <input type="text" class="form-control-1-4-small" id="Issuenumber2" onkeypress="return isNumber(event)" onKeyup="autotab(this, document.form2.housenumber)" value="" maxlength="2"></p>
 
             <!-- <input name="Start" type="button" class="button" value="Start" onClick="changeImage()" > -->
           </form>
@@ -403,12 +526,14 @@ return false //disable key press
           <p class="fields"><label class="heading-xsmall" for="ni-number2">House number/name </label></p>
           <input type="text" class="form-control-small" id="housenumber" >
 
-          <p class="fields"><label class="heading-xsmall" for="ni-number5">Post code</label></p>
-          <input type="text" class="form-control-1-4-small" id="ni-number5" onKeyDown="if (event.keyCode == 13) document.getElementById('Findaddress1').click()"></p>
+          <p class="fields"><label class="heading-xsmall" for="ni-number5" >Post code</label></p>
+            <input type="text" class="form-control-1-4-small" id="pcode" onKeyDown="if (event.keyCode == 13)FindAddress2()" >
+
+          <p class ="dataerror" id="postcodeerror"> </p>
   
-           <input name="Findaddress1" type="button" class="button" value="Find Address" onclick="FindAddress2()" />
+           <p class="fields"><input name="Findaddress1" type="button" class="button" value="Find Address" onclick="FindAddress2()" />
             
-          <input name="popaddress1" type="button" class="button-secondary" value="Current Address" onclick="PopulateAddress()" />
+          <input name="popaddress1" type="button" class="button-secondary" value="Current Address" onclick="PopulateAddress()" /></p>
     
     </form>
  <!-- SAME ORDER AS D1 STOP CHANGING THINGS ROUND -->       
@@ -418,19 +543,22 @@ return false //disable key press
 
 <table style="border: 1px solid white; width:100%; cellspacing=0; cellpadding=0">
         <tr>
-          <td width="50%"><label class="heading-xsmall" for="ni-number8">Daytime tel number </label>
-            <input type="text" class="form-control-small" id="ni-number8" width="10" onkeypress="return numbersonly(event)"></td>
+          <td width="50%"><label class="heading-xsmall" for="ni-number7">Daytime tel number </label>
+            <input type="text" class="form-control-small" id="daytel" width="10"  oonkeypress="return isNumber(event)" onKeyup="autotab(this, document.form3.mobno)" size="11" maxlength="11"></td>
+
           <td width="50%"><label class="heading-xsmall" for="ni-number8">&nbsp;Mobile number</label>
-            <input name="mobno" type="text" class="form-control-small" id="mobno"  onkeypress="return numbersonly(event)" onKeyup="autotab(this, document.form4.eyes)" size="11" maxlength="11"></td>
+            <input name="mobno" type="text" class="form-control-small" id="mobno"  onkeypress="return isNumber(event)" onKeyup="autotab(this, document.form3.email)" size="11" maxlength="11"></td>
         </tr>
       </table>
-
+      <p class ="dataerror" id="phonenumbererror"></p>
+  
       <p class="fields"><label class="heading-xsmall" for="ni-number2" id="emaillable"> Email address</label></P>
         <input type="text" class="form-control-small" id="email" onKeyDown="if (event.keyCode == 9) emailformat()">
+        <p class ="dataerror" id="emailerror"></p>
 
 <p class="fields"><label class="heading-xsmall" for="ni-number7">Country you were born in</label></P>
         <!--<input type="text" class="form-control" id="countborn">-->
-        <input type=text class="form-control-small" list=browsers >
+        <input type=text class="form-control-small" list=browsers  id="countrybornin">
         <datalist id=browsers >
           <option> Afghanistan
           <option> Albania
@@ -610,6 +738,7 @@ return false //disable key press
           <option> Tajikistan
           <option> Tanzania
           <option> Thailand
+            <option> The Shire
           <option> Togo
           <option> Tonga
           <option> Trinidad & Tobago
@@ -641,6 +770,7 @@ return false //disable key press
       <p>&nbsp;</p>
     </form></p>
         </div>
+        
         <div class="column-third">
            
   
@@ -648,6 +778,7 @@ return false //disable key press
        
          <p class="fields"><label class="heading-xsmall" for="full-name2">Eyesight</label></P>
          <select name="eyes" id="eyes">
+          <option value="No change"> </option>
            <option value="No glases">No glasses</option>
            <option value="Glasses">Glasses</option>
          </select>
@@ -657,10 +788,10 @@ return false //disable key press
 
     <form id="organform" name="organform" method="post" action="">
       <p class="fields"><label class="heading-xsmall" >Organ donation</label></P>
-      <label>
+      <!-- <label>
         <input type="checkbox" name="organform" id="all" onClick="toggle2(this)"/>
-      <span class="bold-xsmall">All</span></label>
-      <br>
+      <span class="bold-xsmall">All</span></label> -->
+     <!--  <br> -->
       <label>
         <input type="checkbox" name="organform" id="alltissue" onClick="toggletissue2(this)" />
         <span class="bold-xsmall">All with tissue</span></label>
@@ -694,12 +825,15 @@ return false //disable key press
             
             
             
-          <p><input name="Submit" type="button" class="button" id="Sibmit" value="Submit"onClick="Submiten()" > </p>
-          <p>&nbsp;</p>
-  </div>
+          <p><div id = "hide_show"><input name="Submit" type="button" class="button" id="Submit" value="Submit" onClick="showhide()" > </p></div>
+        
+          <div class="starthidden" id = "hide_show2"><div class ="grid-row-inline"><p class="fields"><label class="heading-xsmall" >Check changes and click submit</p><p class="fields"><input name="Submit2" type="button" class="button" id="Submit2" value="Confirm" onClick="Submiten()"> <input name="Cancel" type="button" class="button-secondary" value="Cancel" /></P>  </div></div>
+<!--           style="display:none"
+ -->           <!-- <p>&nbsp;</p> -->
+  <!-- </div>
         </div>
-      </div>
-    </div>
+      </div> -->
+    <!-- </div> -->
 
 </body>
 </main>

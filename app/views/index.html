@@ -5,6 +5,24 @@
 {{$content}}
 <main id="content" role="main">
   <header class="page-header">
+
+
+<script>
+function Submiten() { 
+ 
+  window.location.href ="COA.html";
+   
+ }
+</script>
+
+<script>
+function reseten() { 
+ 
+  window.location.href = "index.html";
+   
+ }
+</script>
+
   </header>
   <body>
   	
@@ -22,6 +40,7 @@
               <option value="Replace">Customer (Offline)</option>
               <option value="Renew">Data Integrity Check</option>
               <option value="1st Application">Record compliance</option>
+               <option value="1st Application">Transaction</option>
             </select>
 
       <p class ="fields"><label class="heading-xsmall" for="DR-number3">Driver Number</label></P>
@@ -30,10 +49,11 @@
     </div>
    	 </div>
   <div class="example example-grid">
-      
+      <h4 class="heading-small">Section 2</h4>
       <div class="grid-row">
+        
         <div class="column-third">
-          <h4 class="heading-small">Section 2</h4>
+          
 
           <p class ="fields"><label class="heading-xsmall" for="full-name-f1">Surname</label></p>
       <input  type="text" class="form-control-3-4-small" id="surname" > 
@@ -55,11 +75,7 @@
     
   </div>
     <div class="column-third">
-          <h4 class="heading-small"></h4>
-
-      <br>
-      <br>
-      <br>
+         
       <p class ="fields"><label class="heading-xsmall" for="full-name-f1">Forename 2</label></P>
       <input class="form-control-3-4-small" id="forenam2" type="text"> 
 
@@ -70,24 +86,24 @@
   </div>
  </div>
     
-
+<h4 class="heading-small">Section 3</h4>
 <div class="grid-row">
   
     <div class="column-half">
-      <h4 class="heading-small">Section 3</h4>
+      
     
   <p class="fields"><label class="heading-xsmall" for="ni-number2">House number/name </label></p>
           <input type="text" class="form-control-3-4-small"  id="housenumber" >
 
           <p class="fields"><label class="heading-xsmall" for="ni-number5">Post code</label></p>
           <input type="text" class="form-control-1-4-small" id="ni-number5" onKeyDown="if (event.keyCode == 13) document.getElementById('Findaddress1').click()"></p>
-  <p></p>
-<div class="example">
-      <button class="button button-get-started">Start now</button>
-    </div>
-<div class="form-group">
-          <button class="button">Reset</button>
-          <p><a href="#">Back</a></p>
+  <!-- <p></p> -->
+<div >
+      <button class="button" input name="Submit" type="button" class="button" id="Submit" value="Submit" onClick="Submiten()" >Start Now </button>
+    <!-- </div>
+<div class="form-group"> -->
+          <button class="button-secondary" onClick="reseten()">Reset</button>
+          
         </div>
 </body>
 </main>
