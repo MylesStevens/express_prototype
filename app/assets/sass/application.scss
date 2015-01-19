@@ -177,7 +177,19 @@
 
 
   .starthidden {
-  display: none;
-  border: 4px solid $yellow;
-  width: 75%;
+    display: none;
+    border: 4px solid $yellow;
+    width: 75%;
+  }
+
+  .infobanner {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: none;
+    background-color: $yellow;
+  
+  }
+
+  .chooseaddress {
+    display: none;
   }

@@ -36,9 +36,18 @@ var regphonenumber2 = /^([a-zA-Z]){1}([0-9][0-9]|[0-9]|[a-zA-Z][0-9][a-zA-Z]|[a-
    var currentfield2V =" \n&nbsp";
    var currentfield3V = " \n&nbsp";
    var currentfield4V = " \n&nbsp";
+  //bits to hide show indo pannl
+  //var divinfohide = document.getElementById( "infobanner1" );
+      
+
+       // if ( divee.style.display !== "none" ) {
+       //      divee.style.display = "none";
+       //      divinfohide.style.display = "block";
+
+
   function autotab2(current,to){
 
-
+var divinfohide = document.getElementById( "infobanner1" );
 
 var refnov = "ref:000 000 000";
 var titlefieldV = " \n&nbsp";
@@ -70,10 +79,10 @@ s1 = s1.toUpperCase();
 
   
 
-// PRMO757022D09KM
-    if (s1=="PRMO757022D09KM"){
+// PRMRO757022D09KM
+    if (s1=="PRMRO757022D09KM"){
       document.getElementById('DR-number3').style.border = "1px solid #bfc1c3";
-        var refnov = "Ref:123 456 789";
+        var refnov = "Ref:81234 120 0000";
     var titlefieldV = "Mrs";
     var GenderV = "Female";
     var SurnamefieldV = "Prmrowxyz";
@@ -98,12 +107,20 @@ s1 = s1.toUpperCase();
 
     document.getElementById("drivernumberror").innerHTML = "";
  
-    Issuenumber2.focus() 
+    Issuenumber2.focus();
+
+    divinfohide.style.display = "none";
 
 // FIRED560012A99XZ
 }   else if (s1=="FIRED560012A99XZ"){
+//make infobox appear
+       // if ( divinfohide.style.display !== "none" ) {
+            divinfohide.style.display = "block";
+          // }
+
+
       document.getElementById('DR-number3').style.border = "1px solid #bfc1c3";
-        var refnov = "Ref:123 456 790";
+        var refnov = "Ref:81234 120 0001";
     var titlefieldV = "Mrs";
     var GenderV = "Female";
     var SurnamefieldV = "Firedrakes";
@@ -128,13 +145,15 @@ s1 = s1.toUpperCase();
 
     document.getElementById("drivernumberror").innerHTML = "";
 
+   
+
     Issuenumber2.focus() 
 
     // BRAND705104R99YZ
  }   else if (s1=="BRAND705104R99YZ" && current.getAttribute && 
       current.value.length==current.getAttribute("maxlength")){
       document.getElementById('DR-number3').style.border = "1px solid #bfc1c3";
-        var refnov = "Ref:123 456 791";
+        var refnov = "Ref:81234 120 0003";
     var titlefieldV = "Mr";
     var GenderV = "Male";
     var SurnamefieldV = "Brandybuck";
@@ -155,18 +174,24 @@ s1 = s1.toUpperCase();
   var photoV = "../public/images/samplephotoBRA.png"
     var signaV = "../public/images/samplesigBRA.png"
 
-    foundaddress ="1 Bag End\nHobbiton\nCoventry\nCV1 2AQ";
+    foundaddress ="Bag End\nHobbiton\nCoventry\nCV1 2AQ";
     
 
     document.getElementById("drivernumberror").innerHTML = "";
  
     Issuenumber2.focus() 
 
+    divinfohide.style.display = "none";
+
+
 
 } else if (current.getAttribute && 
       current.value.length==current.getAttribute("maxlength")) {
         document.getElementById('DR-number3').style.border = "4px solid red";
         document.getElementById("drivernumberror").innerHTML = "Driver number not found";
+
+        divinfohide.style.display = "none";
+
 
         } 
   //SET VARIABLES
@@ -202,9 +227,11 @@ function tabcheck() {
   if (s1 != ""){
     document.getElementById('DR-number3').style.border = "4px solid red";
     document.getElementById("drivernumberror").innerHTML = "Driver number not found";
+    divinfohide.style.display = "none";
   } else {
     document.getElementById('DR-number3').style.border = "1px solid #bfc1c3";
     document.getElementById("drivernumberror").innerHTML = "";
+    divinfohide.style.display = "none";
   }
 }
 </script>
@@ -236,16 +263,22 @@ else{
 
 <script>
   function FindAddress2() { 
-    
+    chooseaddress1.style.display = "none";
     var regPostcode = /^([a-zA-Z]){1}([0-9][0-9]|[0-9]|[a-zA-Z][0-9][a-zA-Z]|[a-zA-Z][0-9][0-9]|[a-zA-Z][0-9]){1}([0-9][a-zA-z][a-zA-z]){1}$/;
     var regPostcode2 = /^([a-zA-Z]){1}([0-9][0-9]|[0-9]|[a-zA-Z][0-9][a-zA-Z]|[a-zA-Z][0-9][0-9]|[a-zA-Z][0-9]){1}([ ])([0-9][a-zA-z][a-zA-z]){1}$/;
     var postcodekeyed = document.forms["form2"]["pcode"].value;
+    postcodekeyed = postcodekeyed.toUpperCase();
 
 if(regPostcode.test(postcodekeyed) == false && regPostcode2.test(postcodekeyed) == false) {
 
 document.getElementById("postcodeerror").innerHTML = "Postcode is not valid";
 document.getElementById('pcode').style.border = "4px solid red"; 
 daytel.focus()
+
+}
+else if(postcodekeyed == "CV12AQ"|| postcodekeyed == "CV1 2AQ"){
+  chooseaddress1.style.display = "block";
+  chooseaddressbox.focus()
 
 }
 else{
@@ -268,6 +301,17 @@ daytel.focus()
   function PopulateAddress() { 
     var textToAppend = currentfield1V + "\n" + currentfield2V + "\n" + currentfield3V + "\n" + currentfield4V 
     document.getElementById('Address3').value = textToAppend;
+ } 
+</script>
+
+<script>
+  function PopulateAddress2() { 
+    foundaddress ="Bag End\nHobbiton\nCoventry\nCV1 2AQ";
+    var textToAppend = foundaddress
+    document.getElementById('Address3').value = textToAppend;
+
+    chooseaddress1.style.display = "none";
+    daytel.focus()
  } 
 </script>
 
@@ -423,6 +467,13 @@ function isNumber(evt) {
     <!-- <div > -->
     <!-- <h4 class="heading-small">Current Information</h4> -->
       <div class="example example-grid">
+        <div class="infobanner" id="infobanner1">
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <div class="example example-grid">
       <div class="grid-row-current">
        <div class="column-quarter">
           <!-- <p class ="data"><h4 class="heading-xsmall-white">Title</h4></p> -->
@@ -509,7 +560,7 @@ function isNumber(evt) {
             <input type="text"  class="form-control-small" id="DR-number3" onKeyup="autotab2(this, document.form1.Issuenumber2)"value="" maxlength="16" autofocus/> -->
 
             <p class ="fields"><label class="heading-xsmall" for="DR-number3">Driver Number</label></p>
-            <input type="text"  class="form-control-small" id="DR-number3"  onKeyup="autotab2(this, document.form1.Issuenumber2)" onKeyDown="if (event.keyCode == 9) tabcheck()" maxlength="15" autofocus/>
+            <input type="text"  class="form-control-small" id="DR-number3"  onKeyup="autotab2(this, document.form1.Issuenumber2)" onKeyDown="if (event.keyCode == 9) tabcheck()" maxlength="16" autofocus/>
             <p class ="dataerror" id="drivernumberror"> </p>
 
             <p class ="fields"><label class="heading-xsmall" for="Issuenumber2"> Issue Number </label></p>
@@ -534,6 +585,15 @@ function isNumber(evt) {
            <p class="fields"><input name="Findaddress1" type="button" class="button" value="Find Address" onclick="FindAddress2()" />
             
           <input name="popaddress1" type="button" class="button-secondary" value="Current Address" onclick="PopulateAddress()" /></p>
+          <div class= "chooseaddress" id="chooseaddress1"> 
+<p class="fields"><label class="heading-xsmall" for="ni-number5.5" >Choose address</label></p>
+            <select size="5" id="chooseaddressbox" style="width:100%" onclick="PopulateAddress2()" onKeyDown="if (event.keyCode == 13) PopulateAddress2()">
+                <option value="Bag End, Hobbiton, Coventry, CV12AQ">Bag End, Hobbiton, Coventry, CV12AQ</option>
+                <option value="1 Lower Lane, Hobbiton, Coventry, CV12AQ">1 Lower Lane, Hobbiton, Coventry, CV12AQ     </option>
+                <option value="2 Lower Lane, Hobbiton, Coventry, CV12AQ">2 Lower Lane, Hobbiton, Coventry, CV12AQ     </option>
+                <option value="3 Lower Lane, Hobbiton, Coventry, CV12AQ">3 Lower Lane, Hobbiton, Coventry, CV12AQ     </option>
+                </select> 
+          </div>
     
     </form>
  <!-- SAME ORDER AS D1 STOP CHANGING THINGS ROUND -->       
@@ -544,7 +604,7 @@ function isNumber(evt) {
 <table style="border: 1px solid white; width:100%; cellspacing=0; cellpadding=0">
         <tr>
           <td width="50%"><label class="heading-xsmall" for="ni-number7">Daytime tel number </label>
-            <input type="text" class="form-control-small" id="daytel" width="10"  oonkeypress="return isNumber(event)" onKeyup="autotab(this, document.form3.mobno)" size="11" maxlength="11"></td>
+            <input name="daytel" type="text" class="form-control-small" id="daytel" onkeypress="return isNumber(event)" onKeyup="autotab(this, document.form3.mobno)" size="11" maxlength="11"></td>
 
           <td width="50%"><label class="heading-xsmall" for="ni-number8">&nbsp;Mobile number</label>
             <input name="mobno" type="text" class="form-control-small" id="mobno"  onkeypress="return isNumber(event)" onKeyup="autotab(this, document.form3.email)" size="11" maxlength="11"></td>
@@ -738,7 +798,7 @@ function isNumber(evt) {
           <option> Tajikistan
           <option> Tanzania
           <option> Thailand
-            <option> The Shire
+          <option> The Shire
           <option> Togo
           <option> Tonga
           <option> Trinidad & Tobago
