@@ -182,9 +182,30 @@
     width: 75%;
   }
 
+  .heading-xsmall-info {
+  font-family: "nta", Arial, sans-serif;
+  color: black;
+  font-size: 14px;
+  line-height: 1.0;
+  font-weight: 700;
+  text-transform: none;
+  //margin-top: 0.5em;
+  margin-bottom: 3 px; 
+  }
+  @media (max-width: 640px) {
+    .heading-xsmall {
+      font-size: 12px;
+      line-height: 1.0; } }
+  @media (min-width: 641px) {
+    .heading-xsmall {
+      //margin-top: 0em;
+      //margin-bottom: 0.05em; 
+      } }
+
   .infobanner {
     margin-top: 5px;
     margin-bottom: 5px;
+    Padding: 10px 10px;
     display: none;
     background-color: $yellow;
   
@@ -193,3 +214,13 @@
   .chooseaddress {
     display: none;
   }
+
+  .column-quarter-info{
+  //padding: 0 15px;
+  //box-sizing: border-box; 
+  //margin-top: 1.0em;
+  //background-color: #456e40;
+    background-color: $yellow;
+    //float: left;
+      width: 25%;
+    }

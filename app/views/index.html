@@ -26,7 +26,11 @@ function reseten() {
   </header>
   <body>
   	
-  
+  <form method="get" action="postcode" class="form">
+
+    <fieldset>
+
+
     <div class="example example-grid">
       <h4 class="heading-small">Section 1</h4>
       <div class="grid-row">
@@ -43,10 +47,13 @@ function reseten() {
                <option value="1st Application">Transaction</option>
             </select>
 
-      <p class ="fields"><label class="heading-xsmall" for="DR-number3">Driver Number</label></P>
-      <input type="text"  class="form-control-3-4-small" id="DR-number3"  onKeyup="autotab2(this, document.form1.Issuenumber2)" onKeyDown="if (event.keyCode == 9) tabcheck()" maxlength="16" />
+       
+              <p class ="fields"><label class="heading-xsmall" for="postcode">Driver Number</label></p>
+              <input type="text" class="form-control-1-2-small" id="postcode" name="postcode">
+              
+            </div>
       
-    </div>
+  
    	 </div>
   <div class="example example-grid">
       <h4 class="heading-small">Section 2</h4>
@@ -99,12 +106,11 @@ function reseten() {
           <input type="text" class="form-control-1-4-small" id="ni-number5" onKeyDown="if (event.keyCode == 13) document.getElementById('Findaddress1').click()"></p>
   <!-- <p></p> -->
 <div >
-      <button class="button" input name="Submit" type="button" class="button" id="Submit" value="Submit" onClick="Submiten()" >Start Now </button>
-    <!-- </div>
-<div class="form-group"> -->
-          <button class="button-secondary" onClick="reseten()">Reset</button>
-          
-        </div>
+      <div class="form-group">
+              <input type="submit" class="button" value="Submit">
+              <button class="button-secondary" onClick="reseten()">Reset</button>
+            </div>
+  
 </body>
 </main>
 {{/content}}

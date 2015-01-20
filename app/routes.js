@@ -8,7 +8,7 @@ module.exports = {
     /* Example pages */
 
     app.get('/examples/hello-world', function (req, res) {
-      res.render('examples/hello-world', {'message' : 'Hello world'});
+      res.render('examples/hello-world', {'message' : 'Hello world you git'});
     });
 
     app.get('/examples/inheritance', function (req, res) {
@@ -18,6 +18,20 @@ module.exports = {
     app.get('/examples/alpha', function (req, res) {
       res.render('examples/alpha/alpha', {'assetPath' : assetPath });    
     });
+/*my new stuff*/
+
+  app.get('/postcode', function (req, res) {
+
+    var y = req.query.postcode;
+
+    res.render('COA', {'assetPath' : assetPath, 'playback-postcode' : y})
+
+    });
+
+
+
+
+
 
   }
 };
